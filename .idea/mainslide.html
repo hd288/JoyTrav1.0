@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Main slide</title>
+    <style>
+      .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+      }
+
+      .slideshow-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .slideshow-container img.active {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <!--      <img src="../media/mainslide/1.jpg" class="active" />-->
+
+      <img src="../media/mainslide/1.jpg" alt="" class="active" />
+    </div>
+    <script>
+      let listImgs = [
+        "../media/mainslide/1.jpg",
+        "../media/mainslide/2.jpg",
+        "../media/mainslide/3.jpg",
+        "../media/mainslide/4.jpg",
+        "../media/mainslide/5.jpg",
+        "../media/mainslide/6.jpg",
+        "../media/mainslide/7.jpg",
+        "../media/mainslide/8.jpeg",
+        "../media/mainslide/9.jpg",
+        "../media/mainslide/10.jpg",
+        "../media/mainslide/11.jpg",
+        "../media/mainslide/12.jpg",
+        "../media/mainslide/13.jpg",
+        "../media/mainslide/14.jpg",
+        "../media/mainslide/15.jpg",
+        "../media/mainslide/16.jpg",
+        "../media/mainslide/17.jpg",
+      ];
+
+      let currentIndex = 0;
+      let imgElement = document.createElement("img");
+      imgElement.alt = "";
+
+      function renderImg(abc) {
+        let element = "";
+        currentIndex++;
+
+        console.log(document.getElementsByClassName("slideshow-container")[0]);
+        document.getElementsByClassName(
+          "slideshow-container"
+        )[0].innerHTML = `  <img src="${listImgs[currentIndex]}" alt="" class="active" />`;
+      }
+      renderImg(listImgs);
+      setInterval(() => {
+        renderImg(listImgs);
+      }, 5000);
+    </script>
+  </body>
+</html>

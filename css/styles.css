@@ -1,0 +1,428 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+/* Reset styles and set global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  height: 160px;
+  background-color: #0097b2;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  padding-top: 10px;
+  max-height: 160px;
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav,
+.nav-items {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-item {
+  display: flex;
+  gap: 30px;
+  font-size: 30px;
+}
+
+.nav-link {
+  color: #ffff;
+}
+
+.button {
+  padding: 6px 20px;
+  width: 70px;
+  height: 40px;
+  border: 2px solid #ffff;
+  color: #ffff;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+.nav-link:hover,
+.button:hover {
+  color: #70c5d4;
+}
+
+.header-search-bar {
+  text-align: center;
+  border: none;
+  position: absolute;
+  width: 30%;
+  top: 80%;
+}
+
+.search-icon {
+  color: #0097b2;
+  position: absolute;
+  right: 12%;
+  top: 10%;
+}
+
+.search-bar {
+  border: transparent;
+  height: 30px;
+  width: 80%;
+  border-radius: 15px;
+  text-align: center;
+  color: #0097b2;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1380px) {
+  .header {
+    width: 100%;
+  }
+
+  .logo {
+    width: 50%;
+    height: 100%;
+    min-width: 150px;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 2.5vw;
+    padding-right: 30px;
+    min-width: 300px;
+  }
+
+  .header-button {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .button {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 725px) {
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 2vw;
+    padding-right: 20px;
+  }
+  .header-search-bar {
+    left: 45%;
+  }
+  .copyright p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 501px) {
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 3vw;
+  }
+  .header-search-bar {
+    left: 55%;
+  }
+}
+
+/* Main content styles */
+.main {
+  margin: 0;
+  width: 100%;
+  padding: 30px 0;
+  background: linear-gradient(360deg, #fff, #0097b2);
+  background-repeat: no-repeat;
+  min-height: 625px;
+}
+
+.gallery-cell {
+  object-fit: contain;
+  height: 550px;
+}
+
+.main-contents {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin: 60px auto 20px 50px;
+}
+
+.article,
+.aside {
+  margin: 20px 30px auto auto;
+  /* border: 1px solid #0097b2; */
+  border-radius: 10px;
+  background-color: #fff;
+  color: #0097b2;
+}
+
+.article-content {
+  padding: 70px 0px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.article img {
+  height: 300px;
+  border-radius: 10px 0px 0px 10px;
+  width: 450px;
+  object-fit: cover;
+}
+
+.article button {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  border: none;
+  width: 130px;
+  height: 30px;
+  background-color: #fff;
+  color: #0097b2;
+}
+
+.article button a {
+  color: #007388;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px;
+}
+
+.article button a:hover {
+  background-color: #46c1f6;
+  color: #fff;
+}
+
+.aside h5 {
+  background-color: #0085ad;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  color: #fff;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.aside ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 5px;
+}
+
+.aside ul li img {
+  height: 60px;
+}
+
+.aside-subscribe {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.aside-subscribe p {
+  font-size: 12px;
+  color: #00394b;
+  padding: 10px 0px 10px 0px;
+}
+
+.aside-subscribe input,
+.aside-subscribe button {
+  width: 95%;
+  height: 40px;
+  text-align: center;
+}
+
+.aside-subscribe button {
+  background-color: #0097b2;
+  color: #fff;
+}
+
+.aside-subscribe button:hover {
+  background-color: #ff1100;
+  color: #fff;
+}
+
+/* Footer styles */
+.footer {
+  background: linear-gradient(180deg, #fff, #0097b2);
+  width: 100%;
+  min-height: 165px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+/* Footer icon styles */
+.wrapper {
+  display: flex;
+  padding-top: 30px;
+  padding-right: 50px;
+  width: 100%;
+}
+
+.icon {
+  margin: 0 20px;
+  cursor: pointer;
+  position: relative;
+  color: #0097b2;
+}
+
+.icon a {
+  color: #0097b2;
+}
+
+.icon i {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon .tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.tooltip,
+.icon i {
+  transition: 0.3s;
+}
+
+.icon:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  top: 70px;
+}
+
+.icon:hover i {
+  color: white;
+}
+
+/* Social media colors */
+:root {
+  --facebook-color: #3b5999;
+  --instagram-color: #e1306c;
+  --youtube-color: #de463b;
+  --twitter-color: #46c1f6;
+  --github-color: #333;
+}
+
+.facebook .tooltip:before,
+.facebook:hover i,
+.facebook .tooltip {
+  background: var(--facebook-color);
+}
+
+.github .tooltip:before,
+.github:hover i,
+.github .tooltip {
+  background: var(--github-color);
+}
+
+.twitter .tooltip:before,
+.twitter:hover i,
+.twitter .tooltip {
+  background: var(--twitter-color);
+}
+
+.instagram .tooltip:before,
+.instagram:hover i,
+.instagram .tooltip {
+  background: var(--instagram-color);
+}
+
+.youtube .tooltip:before,
+.youtube:hover i,
+.youtube .tooltip {
+  background: var(--youtube-color);
+}
+
+/* Copyright section */
+.footer .copyright {
+  min-width: 600px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1190px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .socials {
+    margin-top: 10px;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .icon:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    top: -50px;
+  }
+
+  .icon {
+    margin: 10px;
+  }
+}

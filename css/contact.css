@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+:root {
+  --main-color: #0097b2;
+}
+.main {
+  background: linear-gradient(360deg, #fff, #0097b2);
+  background-repeat: no-repeat;
+}
+.main-cards {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0 30px;
+}
+
+.card__img {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  transition: 0.25s;
+  margin: 0 auto;
+  transform: translateY(25px);
+  border-radius: 50%;
+  border: 4px solid var(--main-color);
+  cursor: pointer;
+}
+
+.card__img:hover {
+  width: 100%;
+  height: 100%;
+  border-radius: unset;
+  border: unset;
+  transform: unset;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+h2 {
+  color: #006172;
+  margin-top: 40px;
+}
+
+.h4 {
+  color: var(--main-color);
+}
+.card__social a {
+  text-decoration: none;
+  color: #0097b2;
+  margin: 25px 20px 40px;
+  display: inline-block;
+  font-size: 18px;
+  transition: 0.25s;
+}
+
+.card__social a:hover {
+  color: #006172;
+}
+
+button {
+  outline: none;
+  border: none;
+  color: #0097b2;
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  padding: 10px 20px;
+  border-radius: inherit;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
